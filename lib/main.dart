@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'groups/main_graph_selection.dart';
+import 'text form field/1st_window_on_text_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,6 +52,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,11 +70,37 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(onPressed: (){}, icon: Icon(Icons.message))
         ],
       ),
-      body: Center(
-        child: TextButton(child: Text('Graphs'), onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (_) => MainGraphSelection()));
-        }),
-      ),
-    );
+      body:Center(
+          child:Row(
+             mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+             crossAxisAlignment:CrossAxisAlignment.center,
+            children:[
+              Container(
+                color:Colors.blue,
+              width:100,
+              height:50,
+              child: TextButton(child: Text('Graphs',style: TextStyle(color: Colors.white),), onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (_) => MainGraphSelection()));
+              }),
+              ),
+              Container(
+                width:100,
+                height:50,
+                color:Colors.blue,
+                child: TextButton(child: Text('On Boarding',style: TextStyle(color: Colors.white),), onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => FirstWindow()));
+                }),
+              ),
+
+               ],
+
+
+      )
+      )
+          );
+
+
+
   }
 }
+
