@@ -67,7 +67,7 @@ class _SecondWindowState extends State<SecondWindow> {
                   ),
                   State(),
                   SizedBox(
-                    height: 15,
+                    height: 15, 
                   ),
                   Container(
                     padding:
@@ -172,7 +172,7 @@ class _SecondWindowState extends State<SecondWindow> {
       child: DropdownButton<String>(
         hint: Text('choose state'),
         isExpanded: true,
-        borderRadius: BorderRadius.circular(20),
+        //borderRadius: BorderRadius.circular(20),
         value: dropDownValue3,
         items:
             <String>['Karnataka', 'Kerala', 'Uttarakhand'].map((String value) {

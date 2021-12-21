@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:sample/http%20request/api_on_ticketID15.dart';
 import 'groups/main_graph_selection.dart';
+import 'http request/http_stringResponse.dart';
 import 'text form field/1st_window_on_text_field.dart';
-
+import 'http request/api_on_ticketID15.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body:Center(
-          child:Row(
+          child:Column(
              mainAxisAlignment:MainAxisAlignment.spaceEvenly,
              crossAxisAlignment:CrossAxisAlignment.center,
             children:[
@@ -89,6 +90,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 color:Colors.blue,
                 child: TextButton(child: Text('On Boarding',style: TextStyle(color: Colors.white),), onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (_) => FirstWindow()));
+                }),
+              ),
+              Container(
+                width:100,
+                height:50,
+                color:Colors.blue,
+                child: TextButton(child: Text('http request',style: TextStyle(color: Colors.white),), onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => StringResponse()));
+                }),
+              ),
+              Container(
+                width:100,
+                height:50,
+                color:Colors.blue,
+                child: TextButton(child: Text('Ticket id=15',style: TextStyle(color: Colors.white),), onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => TicketId()));
                 }),
               ),
 
